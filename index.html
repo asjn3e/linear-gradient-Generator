@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Gradient Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container container--glass">
+        <h1 class="bigTitle">Linear Gradient Generator</h1>
+        <section class="block">
+            <h3 class="block__title">Choose Color</h3>
+            <div class="block__colors__grid" id="inputsPlace">
+                <input class="block__inputs__color" type="color" value="#BC5F04">
+                <input class="block__inputs__color" type="color" value="#F4442E">
+                <button class="block__addColor" id="addColor">+</button>
+            </div>
+        </section>
+        <section class="block block--column">
+            <h3 class="block__title">Choose Direction</h3>
+            <select class="block__inputs__select" name="" id="">
+                <option value="" selected>none</option>
+                <option value="">to Right</option>
+                <option value="">to Left</option>
+                <option value="">to top</option>
+                <option value="">to Bottom</option>
+            </select>
+            <span class="block__or">OR</span>
+            <input class="block__inputs__text" type="text" placeholder="deg or direction">
+        </section>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
