@@ -4,7 +4,7 @@ let inputsLength=2;
 // document.documentElement.style.setProperty('--gradient',"#ffffff")
 
 let direction="to right"
-let colors=''
+let colors=', #c21500,#ffc500'
 
 function addColor(){
     const inputsPlace=document.querySelector("#inputsPlace");
@@ -23,6 +23,7 @@ function addColor(){
     inputsPlace.appendChild(input);
     inputsPlace.appendChild(addColorBtn);
     changeColors();
+    changeDirection();
 }
 
 function changeColors(){
@@ -30,7 +31,7 @@ function changeColors(){
     const inputs = inputsPlace.querySelectorAll("input")
     for(let j = 0;j < inputsLength; j++){
         inputs[j].addEventListener("input",()=>{
-            colors=[]
+            colors=''
             inputs.forEach(element => {
                 colors+=(`,${element.value}`)
             });
@@ -40,12 +41,20 @@ function changeColors(){
     }
 }
 
-// function changeDirection(){
-//     document.querySelector('select').addEventListener("input",()=>{
-        
-//     })
-// }
+function changeDirection(){
+    const selectDirection = document.querySelector('#selectDirection')
+    selectDirection.addEventListener("input",()=>{
+        direction=selectDirection.value;
+        document.documentElement.style.setProperty('--gradient',`linear-gradient(${direction}${colors})`)
+    })
+    const typeDirection=document.querySelector('#typeDirection')
+    typeDirection.addEventListener("change",()=>{
+        direction=typeDirection.value;
+        document.documentElement.style.setProperty('--gradient',`linear-gradient(${direction}${colors})`)
+    })
+}
 
 addColorBtn.addEventListener("click",addColor);
 
 changeColors();
+changeDirection();

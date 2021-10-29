@@ -135,7 +135,7 @@ h3{
     
     border: none;
     outline: none;
-    cursor: pointer;
+    cursor: auto;
     padding: 1rem;
     border-radius: 10px;
     width: 100%;

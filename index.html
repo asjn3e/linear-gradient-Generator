@@ -18,22 +18,22 @@
         <section class="block">
             <h3 class="block__title">Choose Color</h3>
             <div class="block__colors__grid" id="inputsPlace">
-                <input class="block__inputs__color" type="color" id="color1" value="#BC5F04">
-                <input class="block__inputs__color" type="color" id="color2" value="#F4442E">
+                <input class="block__inputs__color" type="color" id="color1" value="#c21500">
+                <input class="block__inputs__color" type="color" id="color2" value="#ffc500">
                 <button class="block__addColor" id="addColorBtn">+</button>
             </div>
         </section>
         <section class="block block--column">
             <h3 class="block__title">Choose Direction</h3>
-            <select class="block__inputs__select" name="" id="">
+            <select class="block__inputs__select" id="selectDirection" name="" id="">
                 <option value="" selected>none</option>
-                <option value="">to Right</option>
-                <option value="">to Left</option>
-                <option value="">to top</option>
-                <option value="">to Bottom</option>
+                <option value="to Right">to Right</option>
+                <option value="to Left">to Left</option>
+                <option value="to top">to top</option>
+                <option value="to Bottom">to Bottom</option>
             </select>
             <span class="block__or">OR</span>
-            <input class="block__inputs__text" type="text" placeholder="deg or direction">
+            <input class="block__inputs__text" id="typeDirection" type="text" placeholder="for example : 45deg or to top left">
         </section>
     </div>
     <script src="index.js"></script>
