@@ -26,6 +26,13 @@ function addColor(){
     changeDirection();
 }
 
+function generateCode(){
+    document.documentElement.style.setProperty('--gradient',`linear-gradient(${direction}${colors})`)
+    document.querySelector('#linearCode').innerHTML=`linear-gradient(${direction}${colors})`;
+    document.querySelector('#HEXCode').innerHTML=colors
+}
+
+
 function changeColors(){
     const inputsPlace = document.querySelector("#inputsPlace");
     const inputs = inputsPlace.querySelectorAll("input")
@@ -36,7 +43,7 @@ function changeColors(){
                 colors+=(`,${element.value}`)
             });
             console.log(colors)
-            document.documentElement.style.setProperty('--gradient',`linear-gradient(${direction}${colors})`)
+            generateCode();
         })
     }
 }
@@ -45,14 +52,15 @@ function changeDirection(){
     const selectDirection = document.querySelector('#selectDirection')
     selectDirection.addEventListener("input",()=>{
         direction=selectDirection.value;
-        document.documentElement.style.setProperty('--gradient',`linear-gradient(${direction}${colors})`)
+        generateCode();
     })
     const typeDirection=document.querySelector('#typeDirection')
     typeDirection.addEventListener("change",()=>{
         direction=typeDirection.value;
-        document.documentElement.style.setProperty('--gradient',`linear-gradient(${direction}${colors})`)
+        generateCode();
     })
 }
+
 
 addColorBtn.addEventListener("click",addColor);
 

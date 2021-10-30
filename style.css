@@ -146,6 +146,23 @@ h3{
     font-size: 1.2rem;
     color: #874000;
 }
+.block__details{
+    background:var(--gradient);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    text-align: center;
+    margin: .9rem 0;
+    display: block;
+    font-size: 1.5rem;
+}
+#linearCode , #HEXCode{
+    font-family: 'Ubuntu';
+    font-size: 1rem;
+}
 @media screen and (min-width:768px){
     .container{
         width: 60%;
@@ -164,5 +181,12 @@ h3{
     }
     .block__colors__grid{
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .block__or , .block__details{
+        font-size: 2rem;
+    }
+    #linearCode , #HEXCode{
+        font-family: 'Ubuntu';
+        font-size: 1.5rem;
     }
 }
